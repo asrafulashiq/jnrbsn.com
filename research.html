@@ -8,10 +8,11 @@ title: Projects
 
             <div class="section row">
                 <h2 class="col">Research Experience</h2>
+                <br/>
                 <div class="section-text col-right">
                     <div class="row">
                         <div class="col">
-                            <h3>Heart rate monitoring using PPG signal corrupted by intense motion artifacts </h3>
+                            <h2>Heart rate monitoring from PPG signal corrupted by intense motion artifacts </h2>
                         </div>
                     </div>
                     <div class="row subsection">
@@ -21,32 +22,47 @@ title: Projects
                         </div>
                         <div class="col-right light"><i>February 2016 - Present</i></div>
                     </div>
-                    <div>
+                    <p></p>
 
+                    <div>
+                        This is my undergraduate thesis work under Prof. Dr. Md. Kamrul Hasan. I had to remove motion artifact and estimate heart rate from PPG signal obtained during intense physical exercise. Lots of works have been done on heart rate monitoring from PPG signal, but most of them work well on patients not doing any physical activity. While running or moving hands arbitrarily, the previous methods fail to estimate heart bit correctly. To obtain correct heart rate, I have been exploring different methods, which include the following - 
                     </div>
                     <ul class="desc">
                         <li>
-                            investigated different non-parametric spectral estimation techniques like MUSIC,burge, pissarenko for PPG data.
+                            <h4>Parametric Spectrum Estimation</h4>
+                            <p>
+                                I investigated different parametric spectral estimation techniques like MUSIC,burge, pissarenko for PPG data. I have found that fourier analysis is not a good estimattion technique for PPG data. I had to use parametric spectrum estimation techniques. I found out that burg estimation with high model order works well on PPG signal.
+                            </p>
                         </li>
                         <li>
-                            calculated gradient of a constraint function in RLS cost function to exploit the frequency sparse information in PPG data.
+                            <h4> Frequency sparsity in RLS </h4>
+                            <p>
+                                It was assumed that clean PPG data would be sparse in frequency domain. To exploit this sparsity constraint, I did modify RLS cost function. I added a sparsity constraint in fourier domain in the rls cost function, and then calculated gradient of it. Applying matrix calculus and some trivial assumptions, I found an adaptive algorithm with this new cost function. I have calculated gradient using L0, L1, L2 norm of the fft of the error signal. Implementing this new algorithm in PPG data, I found out that PPG signal with intense motion artifacts does not exhibit the necessary sparsity in frequency domain.  
+                            </p>
                         </li>
                         <li>
+                        <h4>Denoising Techniques</h4>
+                        <p>
                             tested different denoising techniques using wavelet transform and Ensemble Empirical Mode Decomposition.
+                        </p>
                         </li>
 
                     </ul>
                     </div>
-
+<br/><br/>
                 <div class="section-text col-right">
                     <div class="row">
                         <div class="col">
-                            <h3>Location Forensic of Media Recordings Utilizing Power Signatures with Support Vector Machine and Pole-Matching Algorithm </h3>
+                            <h2>Location Forensic of Media Recordings Utilizing Power Signatures with Support Vector Machine and Pole-Matching Algorithm </h2>
                         </div>
                     </div>
                     <div class="row subsection">
                         <div class="emph col"><i>Supervisor : Dr. Mohammad Ariful Haque , BUET</i></div>
                         <div class="col-right light"><i> August 2015 -  April 2016</i></div>
+                    </div>
+                    <p></p>
+                    <div>
+                        I had to collaborate on building an intelligent system that could recognize different grid locations from media recordings. Initially we started working for winning the Signal Processing Cup competition arranged by IEEE Signal Processing Society. But after winning the competition, I, along with some other members of the team, continued to work on improving our methods. There were mainly two major divisions in our group - one was spectrum estimation and feature extraction group, and the other was classification group. I was mainly involved in classification task. 
                     </div>
                     <ul class="desc">
                         
@@ -71,19 +87,22 @@ title: Projects
                             used KNN algorithm in our novel distance-based pole-matching algorithm that resulted in 90% accuracy and great speed boost for real time analysis. 
                     
                         </li>
-
-                        <li>
-                            Our work on Location forensic has won the 1st prize in IEEE Signal Processing Cup Competition 2016. More can be found <a href='https://asrafulashiq.github.io/spcup_2016/'> here.</a>
-                        </li>
+                        <p>
+                        </p>
+                        <p>
+                            Our work on location forensic has won the 1st prize in IEEE Signal Processing Cup Competition 2016. More can be found <a href='https://asrafulashiq.github.io/spcup_2016/'> here.</a>
+                        </p>
                                   
 
                     </ul>
                 </div>
 
+                <br/>
+
                 <div class="section-text col-right">
                     <div class="row">
                         <div class="col">
-                            <h3>Mobile Healthcare</h3>
+                            <h2>Mobile Healthcare</h2>
                         </div>
                     </div>
                     <div class="row subsection">
